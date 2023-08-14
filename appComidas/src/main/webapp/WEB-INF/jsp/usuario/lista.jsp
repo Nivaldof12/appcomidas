@@ -38,8 +38,6 @@
 			      <th>E-mail</th>
 			      <th>Tipo</th>
 			      <th>Setor</th>
-			      <th>Idade</th>
-			      <th>Salário</th>
 			      <th>Admin</th>
 			      <th>Endereço</th>
 			      <th>Solicitantes</th>
@@ -60,8 +58,6 @@
 				      <td>${u.email}</td>
 				      <td>${u.tipo}</td>
 				      <td>${u.setor}</td>
-				      <td>${u.idade}</td>
-				      <td>${u.salario}</td>
 				      <td>${u.admin}</td>
 				      <td>${u.endereco}</td>
 				      <td>${u.solicitantes.size()}</td>

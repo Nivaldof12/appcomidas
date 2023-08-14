@@ -23,8 +23,6 @@ public class Usuario {
 	private String email;
 	private String tipo;
 	private String setor;
-	private int idade;
-	private float salario;
 	private boolean admin;
 	@OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idUsuario")
@@ -57,13 +55,11 @@ public class Usuario {
 	public String toString() {
 
 		return String.format(
-				"O usu�rio %s tem as credenciais %s e %s, %d anos e ganha R$%.2f. "
+				"O usu�rio %s tem as credenciais %s e %s. "
 				+ "� um usu�rio do tipo %s, atua no setor %s", 
 				nome,
 				email,
 				senha,
-				idade,
-				salario,
 				tipo,
 				setor
 			);
@@ -104,18 +100,6 @@ public class Usuario {
 	}
 	public void setSetor(String setor) {
 		this.setor = setor;
-	}
-	public int getIdade() {
-		return idade;
-	}
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-	public float getSalario() {
-		return salario;
-	}
-	public void setSalario(float salario) {
-		this.salario = salario;
 	}
 	public List<Solicitante> getSolicitantes() {
 		return solicitantes;

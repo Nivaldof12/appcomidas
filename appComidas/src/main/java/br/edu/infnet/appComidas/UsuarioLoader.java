@@ -20,8 +20,6 @@ public class UsuarioLoader implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		
 		Usuario userAdmin = new Usuario("Administrador ", "admin@admin.com", "123");
-		userAdmin.setIdade(99);
-		userAdmin.setSalario(9999);
 		userAdmin.setSetor("Diretoria");
 		userAdmin.setTipo("Admin");
 		userAdmin.setAdmin(true);
@@ -32,8 +30,6 @@ public class UsuarioLoader implements ApplicationRunner {
 		
 		for (int i = 0; i < 9; i++) {
 			Usuario usuario = new Usuario("Usuario " + i, "usuario"+i+"@usuario.com", "0"+i);
-			usuario.setIdade(i*4);
-			usuario.setSalario(i*100);
 			usuario.setSetor("Presidência");
 			usuario.setTipo("Padrão");
 

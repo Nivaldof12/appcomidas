@@ -39,16 +39,6 @@
 				<label>E-mail:</label>
 				<input type="email" name="email" value="nivaldo@gmail.com" class="form-control">
 			</div>
-						
-			<div class="form-group">
-				<label>Idade:</label> 	
-				<input type="text" name="idade" value="44" class="form-control">
-			</div>
-
-			<div class="form-group">
-				<label>Salário:</label> 	
-				<input type="text" name="salario" value="999999" class="form-control">
-			</div>
 
 			<div class="form-group">						
 				<label>Tipo:</label>			
