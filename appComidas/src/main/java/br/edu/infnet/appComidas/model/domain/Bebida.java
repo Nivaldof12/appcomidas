@@ -3,7 +3,7 @@ package br.edu.infnet.appComidas.model.domain;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import br.edu.infnet.appComidas.model.exceptions.TamanhoBebidaInvalidoException;
+import br.edu.infnet.appComidas.model.exceptions.InvalidaException;
 import br.edu.infnet.appComidas.model.exceptions.ValorZeradoException;
 
 @Entity
@@ -24,10 +24,10 @@ public class Bebida extends Produto {
 	}
 
 	@Override
-	public float calcularValorVenda() throws TamanhoBebidaInvalidoException {
+	public float calcularValorVenda() throws InvalidaException {
 		
 		if(tamanho < 300) {
-			throw new TamanhoBebidaInvalidoException("O tamanho da bebida está inválido!");
+			throw new InvalidaException("O tamanho da bebida está inválido!");
 		}
 		
 		return this.getValor() + (gelada ? 3 : 0) + tamanho * 0.05f;

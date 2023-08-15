@@ -1,7 +1,7 @@
 package br.edu.infnet.appComidas.model.tests;
 
 import br.edu.infnet.appComidas.model.domain.Bebida;
-import br.edu.infnet.appComidas.model.exceptions.TamanhoBebidaInvalidoException;
+import br.edu.infnet.appComidas.model.exceptions.InvalidaException;
 import br.edu.infnet.appComidas.model.exceptions.ValorZeradoException;
 
 public class BebidaTest {
@@ -14,7 +14,7 @@ public class BebidaTest {
 			b1.setTamanho(500);
 			System.out.println(b1);
 			System.out.println("Valor de Venda = R$" + b1.calcularValorVenda());
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
@@ -24,7 +24,7 @@ public class BebidaTest {
 			b1.setTamanho(200);
 			System.out.println(b1);
 			System.out.println("Valor de Venda = R$" + b1.calcularValorVenda());
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
@@ -34,7 +34,7 @@ public class BebidaTest {
 			b2.setTamanho(300);
 			System.out.println(b2);
 			System.out.println("Valor de Venda = R$" + b2.calcularValorVenda());
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
@@ -44,7 +44,7 @@ public class BebidaTest {
 			b3.setTamanho(1000);
 			System.out.println(b3);
 			System.out.println("Valor de Venda = R$" + b3.calcularValorVenda());
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 	}

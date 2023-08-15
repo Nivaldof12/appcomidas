@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appComidas.model.domain.Bebida;
 import br.edu.infnet.appComidas.model.domain.Usuario;
-import br.edu.infnet.appComidas.model.exceptions.TamanhoBebidaInvalidoException;
+import br.edu.infnet.appComidas.model.exceptions.InvalidaException;
 import br.edu.infnet.appComidas.model.exceptions.ValorZeradoException;
 import br.edu.infnet.appComidas.model.service.BebidaService;
 
@@ -34,7 +34,7 @@ public class BebidaLoader implements ApplicationRunner {
 			System.out.println("Valor de Venda = R$" + bebida.calcularValorVenda());
 
 			bebidaService.incluir(bebida);
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
@@ -47,7 +47,7 @@ public class BebidaLoader implements ApplicationRunner {
 			System.out.println("Valor de Venda = R$" + bebida.calcularValorVenda());
 
 			bebidaService.incluir(bebida);
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
@@ -60,7 +60,7 @@ public class BebidaLoader implements ApplicationRunner {
 			System.out.println("Valor de Venda = R$" + bebida.calcularValorVenda());
 
 			bebidaService.incluir(bebida);
-		} catch (ValorZeradoException | TamanhoBebidaInvalidoException e) {
+		} catch (ValorZeradoException | InvalidaException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 		

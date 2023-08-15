@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import br.edu.infnet.appComidas.model.exceptions.TamanhoBebidaInvalidoException;
+import br.edu.infnet.appComidas.model.exceptions.InvalidaException;
 import br.edu.infnet.appComidas.model.exceptions.ValorZeradoException;
 
 @Entity
@@ -51,7 +51,7 @@ public abstract class Produto {
 		this.valor = valor;
 	}
 	
-	public abstract float calcularValorVenda() throws TamanhoBebidaInvalidoException;
+	public abstract float calcularValorVenda() throws InvalidaException;
 
 	@Override
 	public String toString() {

@@ -14,7 +14,7 @@
         <li><a href="/solicitante/lista" style="color: #fff;">Solicitante</a></li>
         <li><a href="/produto/lista" style="color: #fff;">Produto</a></li>
         <li><a href="/bebida/lista" style="color: #fff;">Bebida</a></li>
-        <li><a href="#" style="color: #fff;">Comida</a></li>
+        <li><a href="/comida/lista" style="color: #fff;">Comida</a></li>
         <li><a href="#" style="color: #fff;">Sobremesa</a></li>
         <li><a href="/pedido/lista" style="color: #fff;">Pedido</a></li>
       </c:if>
