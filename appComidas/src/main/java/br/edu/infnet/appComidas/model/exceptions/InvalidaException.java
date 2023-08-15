@@ -1,10 +1,10 @@
 package br.edu.infnet.appComidas.model.exceptions;
 
-public class TamanhoBebidaInvalidoException extends Exception {
+public class InvalidaException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	public TamanhoBebidaInvalidoException(String mensagem) {
+	public InvalidaException(String mensagem) {
 		super(mensagem);
 	}
 }
