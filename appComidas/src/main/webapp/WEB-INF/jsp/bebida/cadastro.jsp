@@ -33,7 +33,7 @@
 			
 			<div class="form-group">
 				<label>Marca:</label> 	
-				<input type="text" name="marca" value="Fanta" class="form-control">
+				<input type="text" name="marca" value="3 corações" class="form-control">
 			</div>
 
 			<button type="submit">Cadastrar</button>
