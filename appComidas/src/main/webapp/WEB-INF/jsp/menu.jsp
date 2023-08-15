@@ -4,7 +4,7 @@
 <nav class="navbar navbar-default" style="background-color: #FFC107; border-color: #FFC107;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" style="color: #fff; font-size: 24px;">AppComidas</a>
+      <a class="navbar-brand" href="/" style="color: #fff; font-size: 24px;">AppComidas</a>
     </div>
     
     <ul class="nav navbar-nav">
