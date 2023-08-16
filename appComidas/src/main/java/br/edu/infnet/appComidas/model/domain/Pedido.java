@@ -88,6 +88,11 @@ public class Pedido {
 				data.format(formato)
 			);
 	}
+	
+	public String getFormattedDate() {
+	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	    return data.format(formatter);
+	}
 
 	public Integer getId() {
 		return id;

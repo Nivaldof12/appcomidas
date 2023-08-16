@@ -43,7 +43,8 @@
 			      <th>Solicitantes</th>
 			      <th>Produtos</th>
 			      <th>Pedidos</th>	
-			      <c:if test="${usuario.admin}">		      
+			      <c:if test="${usuario.admin}">
+			      	<th>Editar</th>		      
 			      	<th></th>		
 			      </c:if>	  
 			    </tr>
@@ -64,7 +65,8 @@
 				      <td>${u.produtos.size()}</td>
 				      <td>${u.pedidos.size()}</td>				      
 				      <c:if test="${usuario.admin}">
-			      	  <td><a href="/usuario/${u.id}/excluir">excluir</a></td>
+				      <td><a href="/usuario/${u.id}/editar"><span class="glyphicon glyphicon-pencil"></span></a></td>
+			      	  <td><a href="/usuario/${u.id}/excluir"><span class="glyphicon glyphicon-remove"></span></a></td>
 			      	  </c:if>
 				    </tr>
 			    </c:forEach>

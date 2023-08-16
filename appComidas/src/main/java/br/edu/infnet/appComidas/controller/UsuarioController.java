@@ -54,4 +54,37 @@ public class UsuarioController {
 
 		return "redirect:/usuario/lista";
 	}
+	
+	@GetMapping(value = "/usuario/{id}/editar")
+	public String telaEditar(@PathVariable Integer id, Model model) {
+		Usuario usuario = usuarioService.obterUsuarioPorId(id);
+		
+			model.addAttribute("usuarioss", usuario);
+			
+			return "usuario/edicaousuario";
+
+	}
+	
+	@PostMapping(value = "/usuario/{id}/alterar")
+	public String alterar(@PathVariable Integer id, Usuario horarioAlterado) {
+		Usuario usuarioExistente = usuarioService.obterUsuarioPorId(id);
+		if (usuarioExistente != null) {
+			// Atualiza os atributos do horário existente com os valores do horário alterado
+			usuarioExistente.setNome(horarioAlterado.getNome());
+			usuarioExistente.setSenha(horarioAlterado.getSenha());
+			usuarioExistente.setEmail(horarioAlterado.getEmail());
+			usuarioExistente.setTipo(horarioAlterado.getTipo());
+			usuarioExistente.setSetor(horarioAlterado.getSetor());
+			
+			usuarioExistente.setEndereco(horarioAlterado.getEndereco());
+			
+			// Salva as alterações no banco de dados
+			usuarioService.incluir(usuarioExistente);
+		} else {
+			// O horário com o ID especificado não foi encontrado, faça algo aqui (por
+			// exemplo, exibir uma mensagem de erro)
+		}
+		return "redirect:/usuario/lista";
+	}
+	
 }

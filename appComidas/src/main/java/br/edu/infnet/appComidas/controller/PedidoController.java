@@ -1,5 +1,7 @@
 package br.edu.infnet.appComidas.controller;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -50,6 +52,9 @@ public class PedidoController {
 	
 	@PostMapping(value = "/pedido/incluir")
 	public String incluir(Pedido pedido, @SessionAttribute("usuario") Usuario usuario) {
+		
+	    LocalDateTime dataAtual = LocalDateTime.now();
+	    pedido.setData(dataAtual);
 		
 		pedido.setUsuario(usuario);
 

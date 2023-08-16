@@ -50,7 +50,7 @@
 				      <td>${p.id}</td>
 				      <td>${p.descricao}</td>
 				      <td>${p.web}</td>
-				      <td>${p.data}</td>
+				      <td>${p.formattedDate}</td>
 				      <td>${p.solicitante.nome}</td>
 				      <td>${p.produtos.size()}</td>
 				      <td><a href="/pedido/${p.id}/excluir">excluir</a></td>
