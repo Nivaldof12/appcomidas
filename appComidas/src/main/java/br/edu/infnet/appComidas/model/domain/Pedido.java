@@ -89,6 +89,7 @@ public class Pedido {
 			);
 	}
 	
+	// Esse método vai converter a data para o formato dd/MM/yyyy
 	public String getFormattedDate() {
 	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	    return data.format(formatter);

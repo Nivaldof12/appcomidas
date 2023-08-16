@@ -53,6 +53,7 @@ public class PedidoController {
 	@PostMapping(value = "/pedido/incluir")
 	public String incluir(Pedido pedido, @SessionAttribute("usuario") Usuario usuario) {
 		
+		//adiciona a data exata no pedido
 	    LocalDateTime dataAtual = LocalDateTime.now();
 	    pedido.setData(dataAtual);
 		
