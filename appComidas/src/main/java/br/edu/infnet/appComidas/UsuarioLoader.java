@@ -21,7 +21,7 @@ public class UsuarioLoader implements ApplicationRunner {
 		
 		Usuario userAdmin = new Usuario("Administrador ", "admin@admin.com", "123");
 		userAdmin.setSetor("Diretoria");
-		userAdmin.setTipo("Admin");
+		userAdmin.setTipo("Administrador");
 		userAdmin.setAdmin(true);
 
 		usuarioService.incluir(userAdmin);
