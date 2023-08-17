@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
 		
 		<c:if test="${not empty mensagem}">		
 			<div class="alert alert-success">
-			  <strong>AtenÁ„o!</strong> ${mensagem}
+			  <strong>Aten√ß√£o!</strong> ${mensagem}
 			</div>		
 		</c:if>
 
@@ -25,7 +25,7 @@
 		</form>
 		
 		<c:if test="${empty solicitantes}">
-			<h5>N„o existem solicitantes cadastrados!!!</h5>
+			<h5>N√£o existem solicitantes cadastrados!!!</h5>
 		</c:if>
 	
 		<c:if test="${not empty solicitantes}">
@@ -38,7 +38,7 @@
 			      <th>Nome</th>
 			      <th>CPF</th>
 			      <th>E-mail</th>
-			      <th>Usu·rio</th>
+			      <th>Usu√°rio</th>
 			      <th></th>
 			    </tr>
 			  </thead>

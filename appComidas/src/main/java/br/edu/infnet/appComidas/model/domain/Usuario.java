@@ -3,6 +3,7 @@ package br.edu.infnet.appComidas.model.domain;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,11 +19,22 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(nullable = false)
 	private String nome;
+	
+	@Column(nullable = false)
 	private String senha;
+	
+	@Column(unique = true)
 	private String email;
+	
+	@Column(nullable = false)
 	private String tipo;
+	
+	@Column(nullable = false)
 	private String setor;
+	
 	private boolean admin;
 	@OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idUsuario")

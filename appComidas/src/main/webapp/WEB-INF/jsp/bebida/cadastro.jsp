@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 			<c:import url="/WEB-INF/jsp/produto/cadastro.jsp"/>
 			
 			<div class="form-group">
-				<label>Características:</label>
+				<label>CaracterÃ­sticas:</label>
 			    <div class="form-check">
 			      <label class="form-check-label">
 			        <input type="checkbox" name="gelada" value="true" class="form-check-input" > Gelada
@@ -33,7 +33,7 @@
 			
 			<div class="form-group">
 				<label>Marca:</label> 	
-				<input type="text" name="marca" value="3 corações" class="form-control">
+				<input type="text" name="marca" value="3 coraÃ§Ãµes" class="form-control">
 			</div>
 
 			<button type="submit">Cadastrar</button>

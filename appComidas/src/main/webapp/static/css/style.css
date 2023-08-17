@@ -34,3 +34,8 @@ body {
 .card-body {
 	text-align: center;
 }
+
+.endereco {
+	font-weight: bold;
+	color: black;
+}

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -6,7 +6,7 @@
 <!--   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">	 -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta charset="ISO-8859-1">
-	<title>Atualizar Usuário</title>
+	<title>Atualizar UsuÃ¡rio</title>
 </head>
 <body>
 
@@ -23,28 +23,28 @@
 		</form>
 	
 		<form action="/usuario/${id}/alterar" method="post">
-			<h3>Atualizar Usuário</h3>
+			<h3>Atualizar UsuÃ¡rio</h3>
 		
 			<div class="form-group">
 				<label>Nome:</label> 	
-				<input type="text" name="nome" value="Nivaldo Ferreira" class="form-control">
+				<input type="text" name="nome" value="Nivaldo Ferreira" class="form-control" required>
 			</div>
 			
 			<div class="form-group">
 				<label>Senha:</label>
-				<input type="password" name="senha" value="123" class="form-control">
+				<input type="password" name="senha" value="123" class="form-control"required>
 			</div>
 			
 			<div class="form-group">
 				<label>E-mail:</label>
-				<input type="email" name="email" value="nivaldo@gmail.com" class="form-control">
+				<input type="email" name="email" value="nivaldo@gmail.com" class="form-control" required>
 			</div>
 
 			<div class="form-group">						
 				<label>Tipo:</label>			
 				<div class="form-check">
 				  <label class="form-check-label">
-				    <input type="radio" name="tipo" value="Padrão" class="form-check-input" > Padrão
+				    <input type="radio" name="tipo" value="PadrÃ£o" checked class="form-check-input" > PadrÃ£o
 				  </label>
 				</div>			
 				<div class="form-check">
@@ -54,7 +54,7 @@
 				</div>			
 				<div class="form-check">
 				  <label class="form-check-label">
-				    <input type="radio" name="tipo" value="Administrador" checked class="form-check-input"> Administrador
+				    <input type="radio" name="tipo" value="Administrador" class="form-check-input"> Administrador
 				  </label>
 				</div>			
 			</div>
@@ -63,8 +63,8 @@
 				<label>Setor:</label>
 				<select name="setor" class="form-control">
 					<option value="Diretoria">Diretoria</option>
-					<option value="Comercial">Comercial</option>
-					<option value="Desenvolvimento" selected>Desenvolvimento</option>
+					<option value="Comercial" selected>Comercial</option>
+					<option value="Desenvolvimento">Desenvolvimento</option>
 				</select>
 			</div>
 			

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -16,12 +16,12 @@
 		
 		<c:if test="${not empty mensagem}">		
 			<div class="alert alert-success">
-			  <strong>Atenção!</strong> ${mensagem}
+			  <strong>AtenÃ§Ã£o!</strong> ${mensagem}
 			</div>		
 		</c:if>
 
 		<c:if test="${empty produtos}">
-			<h5>Não existem produtos cadastrados!!!</h5>
+			<h5>NÃ£o existem produtos cadastrados!!!</h5>
 		</c:if>
 	
 		<c:if test="${not empty produtos}">
@@ -31,7 +31,7 @@
 			  <thead>
 			    <tr>
 			      <th>ID</th>
-			      <th>Código</th>
+			      <th>CÃ³digo</th>
 			      <th>Nome</th>
 			      <th>Valor</th>
 			      <th></th>

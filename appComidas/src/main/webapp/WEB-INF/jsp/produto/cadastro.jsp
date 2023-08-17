@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <div class="form-group">
-	<label>Código:</label> 	
+	<label>CÃ³digo:</label> 	
 	<input type="text" name="codigo" value="123456" class="form-control">
 </div>
 

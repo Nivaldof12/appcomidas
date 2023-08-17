@@ -1,5 +1,6 @@
 package br.edu.infnet.appComidas.model.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,11 +13,21 @@ public class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(nullable = false)
 	private String cep;
+	@Column(nullable = false)
 	private String logradouro;
+	
 	private String complemento;
+	
+	@Column(nullable = false)
 	private String bairro;
+	
+	@Column(nullable = false)
 	private String localidade;
+	
+	@Column(nullable = false)
 	private String uf;
 	
 	@Override

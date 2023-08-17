@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -18,12 +18,12 @@
 			<h3>Cadastro de Pedidos</h3>
 
 			<div class="form-group">
-				<label>Descrição:</label> 	
+				<label>DescriÃ§Ã£o:</label> 	
 				<input type="text" name="descricao" value="Primeiro Pedido Cadastrado" class="form-control">
 			</div>
 			
 			<div class="form-group">
-				<label>Características:</label>
+				<label>CaracterÃ­sticas:</label>
 			    <div class="form-check">
 			      <label class="form-check-label">
 			        <input type="checkbox" name="web" value="true" class="form-check-input" > Atendimento Web
@@ -47,7 +47,7 @@
 				</c:if>
 				<c:if test="${empty solicitantes}">
 					<c:set var="botao" value="disabled"/>
-					<label>Não existem solicitantes cadastrados!</label>
+					<label>NÃ£o existem solicitantes cadastrados!</label>
 				</c:if>
 			</div>
 			
@@ -64,7 +64,7 @@
 				</c:if>
 				<c:if test="${empty produtos}">
 					<c:set var="botao" value="disabled"/>
-					<label>Não existem produtos cadastrados!</label>
+					<label>NÃ£o existem produtos cadastrados!</label>
 				</c:if>
 			</div>
 			

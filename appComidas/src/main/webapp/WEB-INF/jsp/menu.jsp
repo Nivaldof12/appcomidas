@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <nav class="navbar navbar-default" style="background-color: #FFC107; border-color: #FFC107;">
@@ -10,7 +10,7 @@
     <ul class="nav navbar-nav">
       <li><a href="/" style="color: #fff;">Home</a></li>
       <c:if test="${not empty usuario}">	
-        <li><a href="/usuario/lista" style="color: #fff;">Usu·rio</a></li>
+        <li><a href="/usuario/lista" style="color: #fff;">Usu√°rio</a></li>
         <li><a href="/solicitante/lista" style="color: #fff;">Solicitante</a></li>
         <li><a href="/produto/lista" style="color: #fff;">Produto</a></li>
         <li><a href="/bebida/lista" style="color: #fff;">Bebida</a></li>
