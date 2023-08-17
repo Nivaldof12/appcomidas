@@ -36,7 +36,7 @@
 						de produtos, simulando um simples catálogo de produtos e um
 						checkout, desenvolvido em Spring Boot. <br> O projeto tem
 						como objetivo principal abordar os conceitos de Herança, Autenticação,
-						Autorização, Hibernate, JPA, JSP, MySQL e muito mais. O código
+						Autorização, Hibernate, JPA, JSP, MySQL, Bootstrap e muito mais. O código
 						fonte do projeto pode ser acessado clicando no <a
 							href="https://github.com/Nivaldof12/appcomidas">link</a>.<br>
 						<br> Fique à vontade para testar o sistema e deixar sua

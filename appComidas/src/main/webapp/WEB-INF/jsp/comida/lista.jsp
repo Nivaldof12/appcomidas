@@ -21,7 +21,7 @@
 		</c:if>
 
 		<form action="/comida" method="get">
-			<button type="submit">Novo</button>
+			<button type="submit" class="btn btn-success">Novo</button>
 		</form>
 		
 		<c:if test="${empty comidas}">

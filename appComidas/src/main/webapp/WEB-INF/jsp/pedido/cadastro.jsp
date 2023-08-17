@@ -68,7 +68,7 @@
 				</c:if>
 			</div>
 			
-			<button ${botao} type="submit">Cadastrar</button>
+			<button ${botao} type="submit" class="btn btn-success">Cadastrar</button>
 		</form>
 	</div>
 </body>

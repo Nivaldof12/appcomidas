@@ -21,7 +21,7 @@
 		</c:if>
 
 		<form action="/solicitante" method="get">
-			<button type="submit">Novo</button>
+			<button type="submit" class="btn btn-success">Novo</button>
 		</form>
 		
 		<c:if test="${empty solicitantes}">

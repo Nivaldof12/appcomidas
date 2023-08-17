@@ -32,7 +32,7 @@
 			
 			<c:import url="/WEB-INF/jsp/endereco/cadastro.jsp"/>			
 
-			<button type="submit">Cadastrar</button>
+			<button type="submit" class="btn btn-success">Cadastrar</button>
 		</form>
 	</div>
 </body>

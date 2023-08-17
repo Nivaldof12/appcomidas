@@ -36,7 +36,7 @@
 				<input type="text" name="ingredientes" value="exemplo" class="form-control">
 			</div>
 
-			<button type="submit">Cadastrar</button>
+			<button type="submit" class="btn btn-success">Cadastrar</button>
 		</form>
 	</div>
 </body>
