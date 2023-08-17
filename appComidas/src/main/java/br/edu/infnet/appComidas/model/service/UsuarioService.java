@@ -33,4 +33,8 @@ public class UsuarioService {
     public Usuario obterUsuarioPorId(Integer id) {
         return usuarioRepository.findById(id).orElse(null);
     }
+    
+    public Usuario obterUsuarioPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
 }

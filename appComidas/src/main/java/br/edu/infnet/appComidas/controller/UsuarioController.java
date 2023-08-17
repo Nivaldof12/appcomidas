@@ -37,10 +37,15 @@ public class UsuarioController {
 	}
 
 	@PostMapping(value = "/usuario/incluir")
-	public String incluir(Usuario usuario, Endereco endereco) {
+	public String incluir(Usuario usuario, Endereco endereco, Model model) {
+		
+	    Usuario existingUsuario = usuarioService.obterUsuarioPorEmail(usuario.getEmail());
+	    if (existingUsuario != null) {
+	        model.addAttribute("mensagem", "O email "+usuario.getEmail()+" já foi cadastrado no sistema.");
+	        return "usuario/cadastro";
+	    }
 		
 		usuario.setEndereco(endereco);
-
 		usuarioService.incluir(usuario);
 		
 		msg = "A inclusão do usuário "+usuario.getNome()+" foi realizada com sucesso!!!";
@@ -79,13 +84,10 @@ public class UsuarioController {
 			usuarioExistente.setTipo(horarioAlterado.getTipo());
 			usuarioExistente.setSetor(horarioAlterado.getSetor());
 			
-			usuarioExistente.setEndereco(horarioAlterado.getEndereco());
-			
 			// Salva as alterações no banco de dados
 			usuarioService.incluir(usuarioExistente);
 		} else {
-			// O horário com o ID especificado não foi encontrado, faça algo aqui (por
-			// exemplo, exibir uma mensagem de erro)
+			
 		}
 		return "redirect:/usuario/lista";
 	}

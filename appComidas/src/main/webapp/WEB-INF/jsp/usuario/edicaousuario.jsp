@@ -14,14 +14,6 @@
 
 	<div class="container">
 	
-		<form action="/cep" class="form-inline" method="post">
-		
-			<label>Cep:</label> 	
-			<input type="text" name="cep" value="55014450" class="form-control">
-
-			<button type="submit" class="btn btn-primary">Buscar</button>
-		</form>
-	
 		<form action="/usuario/${id}/alterar" method="post">
 			<h3>Atualizar Usuário</h3>
 		
@@ -66,11 +58,9 @@
 					<option value="Comercial" selected>Comercial</option>
 					<option value="Desenvolvimento">Desenvolvimento</option>
 				</select>
-			</div>
+			</div>			
 			
-			<c:import url="/WEB-INF/jsp/endereco/cadastro.jsp"/>
-			
-			<button type="submit">Atualizar</button>
+			<button type="submit" class="btn btn-success">Atualizar</button>
 		</form>
 	</div>
 </body>
