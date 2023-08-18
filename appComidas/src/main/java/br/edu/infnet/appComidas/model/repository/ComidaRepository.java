@@ -11,6 +11,6 @@ import br.edu.infnet.appComidas.model.domain.Comida;
 @Repository
 public interface ComidaRepository extends CrudRepository<Comida, Integer> {
 
-	@Query("from Comida c where c.usuario.id = :userId")
+	@Query("from Comida")
 	List<Comida> obterLista(Integer userId);
 }

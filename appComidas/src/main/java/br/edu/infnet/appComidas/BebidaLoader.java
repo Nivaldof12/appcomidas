@@ -26,7 +26,7 @@ public class BebidaLoader implements ApplicationRunner {
 		admin.setId(1);
 		
 		try {
-			Bebida bebida = new Bebida("b1caf5", "cafezin", 5, "Cooooffeeee");
+			Bebida bebida = new Bebida("b1caf4", "Chocolate Quente", 4, "Nestle");
 			bebida.setGelada(false);
 			bebida.setTamanho(500);
 			bebida.setUsuario(admin);
@@ -39,9 +39,9 @@ public class BebidaLoader implements ApplicationRunner {
 		}
 
 		try {
-			Bebida bebida = new Bebida("b1caf5", "cafezin", 5, "Cooooffeeee");
-			bebida.setGelada(false);
-			bebida.setTamanho(500);
+			Bebida bebida = new Bebida("b1caf3", "Pefrigerante", 5, "Pepsi");
+			bebida.setGelada(true);
+			bebida.setTamanho(350);
 			bebida.setUsuario(admin);
 			System.out.println(bebida);
 			System.out.println("Valor de Venda = R$" + bebida.calcularValorVenda());
@@ -52,9 +52,9 @@ public class BebidaLoader implements ApplicationRunner {
 		}
 
 		try {
-			Bebida bebida = new Bebida("b1caf5", "cafezin", 5, "Cooooffeeee");
-			bebida.setGelada(false);
-			bebida.setTamanho(500);
+			Bebida bebida = new Bebida("b1caf2", "Beats", 8, "Skol");
+			bebida.setGelada(true);
+			bebida.setTamanho(300);
 			System.out.println(bebida);
 			bebida.setUsuario(admin);
 			System.out.println("Valor de Venda = R$" + bebida.calcularValorVenda());

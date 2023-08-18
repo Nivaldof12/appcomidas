@@ -26,9 +26,9 @@ public class SobremesaController {
 	}	
 
 	@GetMapping(value = "/sobremesa/lista")
-	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
+	public String telaLista(Model model) {
 		
-		model.addAttribute("sobremesas", sobremesaService.obterLista(usuario));
+		model.addAttribute("sobremesas", sobremesaService.obterLista());
 
 		model.addAttribute("mensagem", msg);
 		

@@ -5,10 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.SessionAttribute;
 
 import br.edu.infnet.appComidas.model.domain.Produto;
-import br.edu.infnet.appComidas.model.domain.Usuario;
 import br.edu.infnet.appComidas.model.service.ProdutoService;
 
 @Controller
@@ -20,9 +18,9 @@ public class ProdutoController {
 	private String msg;
 
 	@GetMapping(value = "/produto/lista")
-	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
+	public String telaLista(Model model) {
 		
-		model.addAttribute("produtos", produtoService.obterLista(usuario));
+		model.addAttribute("produtos", produtoService.obterLista());
 
 		model.addAttribute("mensagem", msg);
 		
