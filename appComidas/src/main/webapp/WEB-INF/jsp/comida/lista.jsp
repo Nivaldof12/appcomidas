@@ -19,11 +19,12 @@
 			  <strong>Atenção!</strong> ${mensagem}
 			</div>		
 		</c:if>
-
-		<form action="/comida" method="get">
-			<button type="submit" class="btn btn-success">Novo</button>
-		</form>
 		
+		<c:if test="${usuario.admin}">
+			<form action="/comida" method="get">
+				<button type="submit" class="btn btn-success">Novo</button>
+			</form>
+		</c:if>
 		<c:if test="${empty comidas}">
 			<h5>Não existem comidas cadastradas!!!</h5>
 		</c:if>
