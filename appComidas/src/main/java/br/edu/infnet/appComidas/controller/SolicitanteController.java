@@ -1,5 +1,7 @@
 package br.edu.infnet.appComidas.controller;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,15 +30,22 @@ public class SolicitanteController {
 
 	@GetMapping(value = "/solicitante/lista")
 	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
-		
-		model.addAttribute("solicitantes", solicitanteService.obterLista(usuario));
-		
-		model.addAttribute("mensagem", msg);
-		
-		msg = null;
-		
-		return "solicitante/lista";
+	    Collection<Solicitante> solicitantes;
+	    
+	    if (usuario.isAdmin()) {
+	        solicitantes = solicitanteService.obterLista();
+	    } else {
+	        solicitantes = solicitanteService.obterLista(usuario);
+	    }
+	    
+	    model.addAttribute("solicitantes", solicitantes);
+	    model.addAttribute("mensagem", msg);
+	    
+	    msg = null;
+	    
+	    return "solicitante/lista";
 	}
+
 
 	@PostMapping(value = "/solicitante/incluir")
 	public String incluir(Solicitante solicitante, Endereco endereco, @SessionAttribute("usuario") Usuario usuario) {

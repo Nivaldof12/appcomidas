@@ -29,7 +29,9 @@ public class SolicitanteService {
 		return (Collection<Solicitante>) solicitanteRepository.findAll();
 	}
 	
-	public Collection<Solicitante> obterLista(Usuario usuario){
-		return solicitanteRepository.obterLista(usuario.getId(), Sort.by(Direction.ASC, "nome"));
+	public Collection<Solicitante> obterLista(Usuario usuario) {
+	    boolean isAdmin = usuario.isAdmin();
+	    return solicitanteRepository.obterLista(isAdmin, usuario, Sort.by(Direction.ASC, "nome"));
 	}
+
 }
