@@ -10,6 +10,8 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/static/css/style.css">
+<link rel="icon" href="${pageContext.request.contextPath}/static/img/favicon.png" type="image/x-icon">
+	
 <title>AppComidas</title>
 </head>
 <body>
@@ -48,6 +50,10 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<div>
+		<c:import url="/WEB-INF/jsp/footer.jsp" />
+	</div>
+	
 </body>
 </html>

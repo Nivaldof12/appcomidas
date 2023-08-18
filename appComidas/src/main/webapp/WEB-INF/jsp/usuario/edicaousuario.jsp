@@ -4,6 +4,7 @@
 <html>
 <head>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="icon" href="${pageContext.request.contextPath}/static/img/favicon.png" type="image/x-icon">
 	<meta charset="UTF-8">
 	<title>Atualizar Usuário</title>
 </head>

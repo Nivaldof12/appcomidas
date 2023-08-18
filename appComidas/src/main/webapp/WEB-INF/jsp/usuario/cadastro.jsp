@@ -7,7 +7,7 @@
 <!--   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">	 -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<meta charset="ISO-8859-1">
+<link rel="icon" href="${pageContext.request.contextPath}/static/img/favicon.png" type="image/x-icon">
 <title>Cadastro de Usuário</title>
 </head>
 <body>

@@ -8,6 +8,7 @@
 	<title>AppComidas</title>
 	<link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/static/css/style.css">
+	<link rel="icon" href="${pageContext.request.contextPath}/static/img/favicon.png" type="image/x-icon">
 </head>
 <body>
 

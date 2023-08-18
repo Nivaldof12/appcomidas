@@ -4,7 +4,7 @@
 <html>
 <head>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<meta charset="ISO-8859-1">
+	<link rel="icon" href="${pageContext.request.contextPath}/static/img/favicon.png" type="image/x-icon">
 	<title>Listagem de Bebidas</title>
 </head>
 <body>
