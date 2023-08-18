@@ -51,7 +51,7 @@
 				      <td>${s.cpf}</td>
 				      <td>${s.email}</td>
 				      <td>${s.usuario.nome}</td>
-				      <td><a href="/solicitante/${s.id}/excluir">excluir</a></td>
+				      <td><a href="/solicitante/${s.id}/excluir"><span class="glyphicon glyphicon-remove"></span></a></td>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

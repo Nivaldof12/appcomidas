@@ -53,7 +53,7 @@
 				      <td>${p.formattedDate}</td>
 				      <td>${p.solicitante.nome}</td>
 				      <td>${p.produtos.size()}</td>
-				      <td><a href="/pedido/${p.id}/excluir">excluir</a></td>
+				      <td><a href="/pedido/${p.id}/excluir"><span class="glyphicon glyphicon-remove"></span></a></td>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

@@ -34,7 +34,9 @@
 			      <th>Código</th>
 			      <th>Nome</th>
 			      <th>Valor</th>
-			      <th></th>
+			      <c:if test="${usuario.admin}">
+			      	<th></th>
+			      </c:if>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -44,8 +46,10 @@
 				      <td>${p.id}</td>
 				      <td>${p.codigo}</td>
 				      <td>${p.nome}</td>
-				      <td>${p.valor}</td>
-				      <td><a href="/produto/${p.id}/excluir">excluir</a></td>
+				      <td>R$ ${p.valor}</td>
+				      <c:if test="${usuario.admin}">
+				      	<td><a href="/produto/${p.id}/excluir"><span class="glyphicon glyphicon-remove"></span></a></td>
+				      </c:if>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

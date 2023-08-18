@@ -42,7 +42,9 @@
 			      <th>Vegetariana</th>
 			      <th>Quantidade</th>
 			      <th>Ingredientes</th>
-			      <th></th>
+			      <c:if test="${usuario.admin}">
+			      	<th></th>
+			      </c:if>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -52,11 +54,13 @@
 				      <td>${c.id}</td>
 				      <td>${c.codigo}</td>
 				      <td>${c.nome}</td>
-				      <td>${c.valor}</td>
+				      <td>R$ ${c.valor}</td>
 				      <td>${c.vegetariana}</td>
 				      <td>${c.quantidade}</td>
 				      <td>${c.ingredientes}</td>
-				      <td><a href="/comida/${c.id}/excluir">excluir</a></td>
+				      <c:if test="${usuario.admin}">
+				      	<td><a href="/comida/${c.id}/excluir"><span class="glyphicon glyphicon-remove"></span></a></td>
+				      </c:if>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

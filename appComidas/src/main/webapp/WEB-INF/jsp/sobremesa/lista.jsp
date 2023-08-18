@@ -42,7 +42,9 @@
 			      <th>Gelada</th>
 			      <th>Tamanho</th>
 			      <th>Sabor</th>
-			      <th></th>
+			      <c:if test="${usuario.admin}">
+			      	<th></th>
+			      </c:if>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -52,11 +54,13 @@
 				      <td>${s.id}</td>
 				      <td>${s.codigo}</td>
 				      <td>${s.nome}</td>
-				      <td>${s.valor}</td>
+				      <td>R$ ${s.valor}</td>
 				      <td>${s.gelada}</td>
 				      <td>${s.tamanho}</td>
 				      <td>${s.sabor}</td>
-				      <td><a href="/sobremesa/${s.id}/excluir">excluir</a></td>
+				      <c:if test="${usuario.admin}">
+				      	<td><a href="/sobremesa/${s.id}/excluir"><span class="glyphicon glyphicon-remove"></span></a></td>
+				      </c:if>
 				    </tr>
 			    </c:forEach>
 			  </tbody>
