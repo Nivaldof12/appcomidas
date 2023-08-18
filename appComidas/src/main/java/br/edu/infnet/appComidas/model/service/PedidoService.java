@@ -28,7 +28,8 @@ public class PedidoService {
 	}
 	
 	public Collection<Pedido> obterLista(Usuario usuario){
-		return (Collection<Pedido>) pedidoRepository.obterLista(usuario.getId());
+		boolean isAdmin = usuario.isAdmin();
+		return pedidoRepository.obterLista(isAdmin, usuario);
 	}
 
 	public Pedido obterPorId(Integer id) {

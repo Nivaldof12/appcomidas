@@ -30,19 +30,28 @@ public class PedidoController {
 
 	@GetMapping(value = "/pedido")
 	public String telaCadastro(Model model, @SessionAttribute("usuario") Usuario usuario) {
-		
-		model.addAttribute("solicitantes", solicitanteService.obterLista(usuario));
+		if (usuario.isAdmin()) {
+			model.addAttribute("solicitantes", solicitanteService.obterLista());
 				
-		model.addAttribute("produtos", produtoService.obterLista(usuario));
-
+			model.addAttribute("produtos", produtoService.obterLista());
+		} else {
+			model.addAttribute("solicitantes", solicitanteService.obterLista(usuario));
+			
+			model.addAttribute("produtos", produtoService.obterLista(usuario));
+		}
+		
 		return "pedido/cadastro";
 	}	
 
 	@GetMapping(value = "/pedido/lista")
 	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
 		
-		model.addAttribute("pedidos", pedidoService.obterLista(usuario));
-
+		if (usuario.isAdmin()) {
+			model.addAttribute("pedidos", pedidoService.obterLista());
+		} else {
+			model.addAttribute("pedidos", pedidoService.obterLista(usuario));
+		}
+		
 		model.addAttribute("mensagem", msg);
 		
 		msg = null;
